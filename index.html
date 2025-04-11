@@ -83,6 +83,17 @@
       padding: 15px;
     }
 
+    /* Estilo da Seção de Notícias */
+    .noticia-destaque {
+      background-color: var(--vermelho);
+      color: var(--branco);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 20px;
+    }
+
     /* Estilo da Equipa */
     .jogadores {
       display: grid;
@@ -128,6 +139,24 @@
       font-size: 14px;
       color: #555;
     }
+
+    .proximos-jogos {
+      padding: 20px;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .proximos-jogos h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .proximos-jogos p {
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
@@ -138,73 +167,42 @@
     <nav id="nav-menu">
       <a href="#sobre">Sobre</a>
       <a href="#equipa">Equipa</a>
-      <a href="#contactos">Contactos</a>
+      <a href="#proximos-jogos">Próximos Jogos</a>
     </nav>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre o Clube</h2>
-    <p>O CF Olivais é um clube de futsal com história, paixão e dedicação. Representamos os Olivais com orgulho e lutamos por cada vitória dentro das quatro linhas.</p>
-  </section>
+  <section>
+    <!-- Seção de Últimas Notícias -->
+    <div class="noticia-destaque">
+      <h2>Últimas Notícias</h2>
+      <p>CF Olivais está à procura de jogadores! O campo de treino está fechado no momento para manutenção, mas em breve reabrirá para novos talentos.</p>
+    </div>
 
-  <section id="equipa">
-    <h2>Equipa</h2>
-    <div class="jogadores">
-      <div class="jogador">
-        <img src="https://via.placeholder.com/150" alt="David">
-        <h3>David</h3>
-        <p>Defesa</p>
-        <span>Altura: 181 cm</span>
-        <span>Nascimento: 28/09/2005</span>
+    <!-- Seção de Jogadores -->
+    <div id="equipa">
+      <h2>Equipa</h2>
+      <div class="jogadores">
+        <!-- Jogadores podem ser inseridos aqui -->
       </div>
-      <div class="jogador">
-        <img src="https://via.placeholder.com/150" alt="Elisandro">
-        <h3>Elisandro</h3>
-        <p>Guarda-redes</p>
-        <span>Altura: 170 cm</span>
-        <span>Nascimento: 15/08/2012</span>
-      </div>
-      <div class="jogador">
-        <img src="https://via.placeholder.com/150" alt="Wilson Fonseca">
-        <h3>Wilson Fonseca</h3>
-        <p>Médio</p>
-        <span>Altura: 170 cm</span>
-        <span>Nascimento: 16/11/2011</span>
-      </div>
-      <div class="jogador">
-        <img src="https://via.placeholder.com/150" alt="Adilson">
-        <h3>Adilson</h3>
-        <p>Defesa</p>
-        <span>Altura: 152 cm</span>
-        <span>Nascimento: 22/08/2012</span>
-      </div>
-      <div class="jogador">
-        <img src="https://via.placeholder.com/150" alt="Diogo Lopes">
-        <h3>Diogo Lopes</h3>
-        <p>Avançado</p>
-        <span>Altura: 155 cm</span>
-        <span>Nascimento: 24/02/2010</span>
-      </div>
+    </div>
+
+    <!-- Seção de Próximos Jogos -->
+    <div id="proximos-jogos" class="proximos-jogos">
+      <h2>Próximos Jogos</h2>
+      <p><strong>CF Olivais vs Celtic</strong></p>
+      <p>Data e hora: A ser anunciada.</p>
     </div>
   </section>
 
-  <section id="contactos">
-    <h2>Contactos</h2>
-    <p>Email: contacto@cf-olivais.pt<br>Telefone: +351 912 345 678</p>
-  </section>
-
   <footer>
-    © 2025 CF Olivais. Todos os direitos reservados.
+    <p>&copy; 2025 CF Olivais. Todos os direitos reservados.</p>
   </footer>
 
   <script>
+    // Função para alternar o menu
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'flex';
-      }
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 
