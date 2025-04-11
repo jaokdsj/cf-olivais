@@ -1,39 +1,233 @@
-<!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CF Olivais</title>
-  <style>
-    body { font-family: Arial; background: #f3f3f3; color: #333; margin: 0; }
-    header, footer { background: #003366; color: white; padding: 1rem; text-align: center; }
-    section { padding: 1rem 2rem; }
-    h2 { color: #003366; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 0.5rem; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Clube de Futebol Olivais</h1>
-    <p>Fundado em 2023 | Idades mistas | Unidos pelo futebol</p>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   CF Olivais Futsal Clube
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow">
+   <div class="container mx-auto flex items-center justify-between p-4">
+    <div class="flex items-center">
+     <div class="relative w-16 h-16 rounded-full border-4 border-black flex items-center justify-center">
+      <div class="absolute inset-0 flex items-center justify-center">
+       <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center">
+        <img alt="Emblema de águia negra" class="w-8 h-8" src="https://storage.googleapis.com/a1aa/image/lVDX52PizJSq2s2SH2oPQSLLtZLD41OQkY8FkY1PzlU.jpg"/>
+       </div>
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center">
+       <div class="absolute top-0 left-0 w-1/2 h-1/2 bg-red-700 rounded-tl-full">
+       </div>
+       <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-700 rounded-tr-full">
+       </div>
+       <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white rounded-bl-full">
+       </div>
+       <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-white rounded-br-full">
+       </div>
+      </div>
+      <div class="absolute top-1 text-white text-xs font-bold">
+       CF OLIVAIS
+      </div>
+      <div class="absolute top-4 left-1 text-white text-xs font-bold">
+       20
+      </div>
+      <div class="absolute top-4 right-1 text-white text-xs font-bold">
+       23
+      </div>
+      <div class="absolute bottom-1 text-black text-xs font-bold">
+       FUTSAL CLUBE
+      </div>
+     </div>
+     <h1 class="ml-4 text-2xl font-bold text-gray-800">
+      CF Olivais Futsal Clube
+     </h1>
+    </div>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="text-gray-800 hover:text-red-700" href="#team">
+        Equipe
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-800 hover:text-red-700" href="#players">
+        Jogadores
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-800 hover:text-red-700" href="#games">
+        Próximos Jogos
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
   </header>
-  <section>
-    <h2>Sobre o Clube</h2>
-    <p>O CF Olivais é um clube jovem com espírito competitivo e espírito de equipa. Aceitamos jogadores e jogadoras de todas as idades.</p>
-  </section>
-  <section>
-    <h2>Jogadores</h2>
-    <ul>
-      <li><strong>João Silva</strong> – Defesa</li>
-      <li><strong>Rita Ferreira</strong> – Avançada</li>
-      <li><strong>Tiago Lopes</strong> – Guarda-Redes</li>
-      <li><strong>Maria Costa</strong> – Médio</li>
-      <li><strong>André Santos</strong> – Extremo</li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 CF Olivais. Todos os direitos reservados.</p>
+  <!-- Main Content -->
+  <main class="container mx-auto p-4">
+   <!-- Team Section -->
+   <section class="my-8" id="team">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+     Informações da Equipe
+    </h2>
+    <p class="text-gray-700">
+     O CF Olivais Futsal Clube é uma equipe dedicada ao futsal, com uma história rica e uma paixão pelo esporte. Nossa missão é promover o futsal e desenvolver talentos locais.
+    </p>
+   </section>
+   <!-- Players Section -->
+   <section class="my-8" id="players">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+     Jogadores
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+     <!-- Player 1 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Elisandro Borges" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Elisandro Borges
+      </h3>
+      <p class="text-gray-700">
+       Posição: Goleiro
+      </p>
+     </div>
+     <!-- Player 2 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de David" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       David
+      </h3>
+      <p class="text-gray-700">
+       Posição: Defensor
+      </p>
+     </div>
+     <!-- Player 3 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Adilson Lobo" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/BnvbzASNnt-nNyhj_fJkucOO2TPh1lq5N4REsuuHSHA.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Adilson Lobo
+      </h3>
+      <p class="text-gray-700">
+       Posição: Defensor
+      </p>
+     </div>
+     <!-- Player 4 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Chiquinho" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Chiquinho
+      </h3>
+      <p class="text-gray-700">
+       Posição: Defensor
+      </p>
+     </div>
+     <!-- Player 5 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Wilson" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Wilson
+      </h3>
+      <p class="text-gray-700">
+       Posição: Meio-campista
+      </p>
+     </div>
+     <!-- Player 6 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Diogo Lopes" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Diogo Lopes
+      </h3>
+      <p class="text-gray-700">
+       Posição: Ala
+      </p>
+     </div>
+     <!-- Player 7 -->
+     <div class="bg-white p-4 rounded-lg shadow">
+      <img alt="Foto de Zé Barão" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
+      <h3 class="text-xl font-bold text-gray-800">
+       Zé Barão
+      </h3>
+      <p class="text-gray-700">
+       Posição: Pivô
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- Next Games Section -->
+   <section class="my-8" id="games">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+     Próximos Jogos
+    </h2>
+    <div class="bg-white p-4 rounded-lg shadow">
+     <div class="flex items-center justify-between mb-4">
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        CF Olivais vs. Celtic
+       </h3>
+       <p class="text-gray-700">
+        Data: 15/04/2023
+       </p>
+       <p class="text-gray-700">
+        Hora: 16:00
+       </p>
+      </div>
+      <div>
+       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
+        Comprar Ingressos
+       </button>
+      </div>
+     </div>
+     <div class="flex items-center justify-between mb-4">
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        CF Olivais vs. Equipe A
+       </h3>
+       <p class="text-gray-700">
+        Data: 15/10/2023
+       </p>
+       <p class="text-gray-700">
+        Hora: 18:00
+       </p>
+      </div>
+      <div>
+       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
+        Comprar Ingressos
+       </button>
+      </div>
+     </div>
+     <div class="flex items-center justify-between mb-4">
+      <div>
+       <h3 class="text-xl font-bold text-gray-800">
+        CF Olivais vs. Equipe B
+       </h3>
+       <p class="text-gray-700">
+        Data: 22/10/2023
+       </p>
+       <p class="text-gray-700">
+        Hora: 20:00
+       </p>
+      </div>
+      <div>
+       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
+        Comprar Ingressos
+       </button>
+      </div>
+     </div>
+     <!-- Add more games as needed -->
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white shadow mt-8">
+   <div class="container mx-auto p-4 text-center">
+    <p class="text-gray-700">
+     © 2023 CF Olivais Futsal Clube. Todos os direitos reservados.
+    </p>
+   </div>
   </footer>
-</body>
+ </body>
 </html>
