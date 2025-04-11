@@ -128,7 +128,6 @@
       font-size: 14px;
       color: #555;
     }
-
   </style>
 </head>
 <body>
@@ -201,7 +200,11 @@
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
     }
   </script>
 
