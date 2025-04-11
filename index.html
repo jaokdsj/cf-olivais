@@ -14,6 +14,42 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
+
+        .cartaz {
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cartaz img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .cartaz h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .cartaz p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .cartaz a {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f5a623;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -39,6 +75,7 @@
             </nav>
         </div>
     </header>
+
     <main class="container mx-auto p-4">
         <!-- Início -->
         <section class="my-8 text-center">
@@ -52,20 +89,12 @@
                 src="https://media-hosting.imagekit.io/b9f3899b127342dc/IMG-20250329-WA0018(1).jpg?Expires=1839014477&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0FtCM1Stde-WuDpMTyH8-0l1cfc~jr8va4tOzVFZMbZd6STQTTrcdNhGhhDAuHP4yHiA2x7SdboTFka8D0TtK90uZ7hzvimtaULWLi-vnhB1ZtXnKGb-1putYtbYDcsJU6cZL~Krcm38jORV2tIoacto2GddHUcb~q0UGccdYEJRRtliV~U2ltIFomCSh7khRRmFFBgW7N7nfLZotmQB--0YrqQ561SBDigy-mdUzgXgkBw8zQiSbx8ZIzrXYqlwOKUiLA45LDOkcE9L0Jpupx1WlB92slk-TE-RY0zmMuCmAozpV7bTBDQvd9Xd2d7GLwkOuL-QnJ6iJ-Wz226LNA__" />
         </section>
 
-        <!-- Próximo Jogo -->
-        <section class="my-8 bg-white text-black p-6 rounded shadow">
-            <h2 class="text-3xl font-bold mb-4 text-center">
-                Próximo Jogo
-            </h2>
-            <div class="flex justify-center items-center mb-4">
-                <img class="h-20 w-20 object-cover rounded-full" src="https://media-hosting.imagekit.io/2ea9d44f345c4bd0/Screenshot_2025-04-11-22-13-58-423_com.whatsapp-edit.jpg?Expires=1839014066&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UJlv2K1FlUKYeBB1HGEgqDxLV2ptdHHDS6DtsAwHeCgrNHUdG5C-13nyvsZhEFcmfhdJpqvG7nkKDolLJJsZAOtapvnFQ~d10LAt7sLOaM4ei5kTLhowpNwzZhiZ2XSDAG6cfzG-jRMMkGuhV8W3c4~baZEofLSAVSOgMrfNeqJQ5eIyfX1NHr8LKr4D3JO6QiYzMwiuUBEb4IpLzt77LSaTdGzVWzfjIgsrjbPP8x4oOG9eQ7ir0E3FipN6qGsnkY~vadMNZMDf3LlMbr7EwJ3fF2g23eAsIq3IxNN-7Hufjt12gue7i~PO6yMKNgumxHMbMMjWY3KMdrU25xmLgQ__" alt="Logo do Celtic" />
-                <p class="text-xl font-bold ml-4">
-                    CFO vs Celtic
-                </p>
-            </div>
-            <p class="text-gray-700 text-center">
-                Não percas o nosso próximo jogo contra o Celtic! Uma grande partida está por vir!
-            </p>
+        <!-- Cartaz do Próximo Jogo -->
+        <section class="my-8 cartaz">
+            <img class="mb-4" src="https://media-hosting.imagekit.io/2ea9d44f345c4bd0/Screenshot_2025-04-11-22-13-58-423_com.whatsapp-edit.jpg?Expires=1839014066&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UJlv2K1FlUKYeBB1HGEgqDxLV2ptdHHDS6DtsAwHeCgrNHUdG5C-13nyvsZhEFcmfhdJpqvG7nkKDolLJJsZAOtapvnFQ~d10LAt7sLOaM4ei5kTLhowpNwzZhiZ2XSDAG6cfzG-jRMMkGuhV8W3c4~baZEofLSAVSOgMrfNeqJQ5eIyfX1NHr8LKr4D3JO6QiYzMwiuUBEb4IpLzt77LSaTdGzVWzfjIgsrjbPP8x4oOG9eQ7ir0E3FipN6qGsnkY~vadMNZMDf3LlMbr7EwJ3fF2g23eAsIq3IxNN-7Hufjt12gue7i~PO6yMKNgumxHMbMMjWY3KMdrU25xmLgQ__" alt="Logo do Celtic" />
+            <h3>Próximo Jogo</h3>
+            <p>CFO vs Celtic</p>
+            <a href="#" class="hover:bg-yellow-500">Saber Mais</a>
         </section>
 
         <!-- Últimas Notícias -->
