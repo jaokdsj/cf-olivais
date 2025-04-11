@@ -100,6 +100,9 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       padding: 20px 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
     }
 
     .jogador {
@@ -140,6 +143,28 @@
       color: #555;
     }
 
+    /* Estilo da Seção de Notícias Separadas */
+    .noticia-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .noticia {
+      display: flex;
+      gap: 15px;
+      background-color: var(--branco);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .noticia img {
+      width: 150px;
+      height: 100px;
+      border-radius: 5px;
+    }
+
     .proximos-jogos {
       padding: 20px;
       background-color: var(--vermelho);
@@ -166,7 +191,7 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="nav-menu">
       <a href="#sobre">Sobre</a>
-      <a href="#equipa">Equipa</a>
+      <a href="#equipa" onclick="mostrarJogadores()">Equipa</a>
       <a href="#proximos-jogos">Próximos Jogos</a>
     </nav>
   </header>
@@ -178,33 +203,23 @@
       <p>CF Olivais está à procura de jogadores! O campo de treino está fechado no momento para manutenção, mas em breve reabrirá para novos talentos.</p>
     </div>
 
-    <!-- Seção de Jogadores -->
-    <div id="equipa">
-      <h2>Equipa</h2>
-      <div class="jogadores">
-        <!-- Jogadores podem ser inseridos aqui -->
+    <!-- Seção de Notícias Separadas -->
+    <div class="noticia-container">
+      <div class="noticia">
+        <img src="https://via.placeholder.com/150x100?text=Campo+Fechado" alt="Campo Fechado">
+        <div>
+          <h3>Campo Fechado para Manutenção</h3>
+          <p>O campo de treino está fechado para manutenção até novo aviso.</p>
+        </div>
       </div>
+      <!-- Adicione mais notícias aqui -->
     </div>
 
-    <!-- Seção de Próximos Jogos -->
-    <div id="proximos-jogos" class="proximos-jogos">
-      <h2>Próximos Jogos</h2>
-      <p><strong>CF Olivais vs Celtic</strong></p>
-      <p>Data e hora: A ser anunciada.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 CF Olivais. Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    // Função para alternar o menu
-    function toggleMenu() {
-      const menu = document.getElementById('nav-menu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-
-</body>
-</html>
+    <!-- Seção de Jogadores (inicialmente oculta) -->
+    <div id="equipa" class="jogadores">
+      <h2>Equipa</h2>
+      <div class="jogador">
+        <img src="https://via.placeholder.com/120" alt="Jogador 1">
+        <h3>Jogador 1</h3>
+        <p>Defesa</p>
+        <span>181cm - 28/09/2005</
