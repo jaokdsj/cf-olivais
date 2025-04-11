@@ -2,11 +2,13 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CF Olivais</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
       body {
         font-family: 'Roboto', sans-serif;
@@ -17,19 +19,23 @@
     <header class="bg-red-700 p-4">
       <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center space-x-4">
-          <img src="https://i.postimg.cc/130LNxvs/Screenshot-2025-04-11-13-13-14-135-com-miui-gallery-edit.jpg" alt="Logo do CF Olivais" class="h-12 w-12 rounded-full"/>
+          <img
+            src="https://i.postimg.cc/130LNxvs/Screenshot-2025-04-11-13-13-14-135-com-miui-gallery-edit.jpg"
+            alt="Logo CF Olivais"
+            class="h-12 w-12 rounded-full"
+          />
           <h1 class="text-3xl font-bold">CF Olivais</h1>
         </div>
         <button class="text-white text-2xl focus:outline-none" id="menu-button">
           <i class="fas fa-bars"></i>
         </button>
-        <nav class="hidden absolute right-4 top-20 bg-red-600 p-4 rounded shadow" id="menu">
+        <nav class="hidden absolute top-16 right-4 bg-red-600 rounded p-4" id="menu">
           <ul class="flex flex-col space-y-4">
-            <li><a class="hover:underline" href="index.html">Início</a></li>
+            <li><a class="hover:underline" href="index.html">Home</a></li>
             <li><a class="hover:underline" href="sobre.html">Sobre</a></li>
             <li><a class="hover:underline" href="jogadores.html">Jogadores</a></li>
             <li><a class="hover:underline" href="jogos.html">Jogos</a></li>
-            <li><a class="hover:underline" href="contato.html">Contato</a></li>
+            <li><a class="hover:underline" href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -39,20 +45,37 @@
       <section class="my-8 text-center">
         <h2 class="text-4xl font-bold mb-4">Bem-vindo ao CF Olivais</h2>
         <p class="text-xl mb-4">
-          O clube de futebol que une paixão, dedicação e talento. Junte-se a nós e faça parte desta grande família!
+          O clube de futebol que une paixão, dedicação e talento. Junte-se a nós!
         </p>
-        <img 
-          src="https://i.postimg.cc/BvX5WmQv/IMG-20250329-WA0018-1.jpg" 
-          alt="Imagem do CF Olivais" 
+        <img
+          src="https://freeimage.host/i/3cVwKtn"
+          alt="Imagem de boas-vindas"
           class="w-full h-64 object-cover rounded mb-4"
         />
       </section>
 
       <section class="my-8">
-        <h2 class="text-2xl font-bold mb-4">Próximo Jogo</h2>
-        <div class="bg-white text-black p-4 rounded shadow text-center">
-          <h3 class="text-xl font-bold mb-2">CFO vs Celtic</h3>
-          <p class="text-gray-700">Prepara-te para um grande jogo! Dá o teu apoio à equipa!</p>
+        <h2 class="text-2xl font-bold mb-4 text-center">Próximo Jogo</h2>
+        <div class="bg-gray-900 text-white rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-around">
+          <div class="flex flex-col items-center">
+            <img
+              src="https://i.postimg.cc/130LNxvs/Screenshot-2025-04-11-13-13-14-135-com-miui-gallery-edit.jpg"
+              alt="Logo CF Olivais"
+              class="w-24 h-24 rounded-full border-4 border-red-500 object-cover mb-2"
+            />
+            <h3 class="text-xl font-bold">CF Olivais</h3>
+          </div>
+
+          <span class="text-2xl font-bold my-4 md:my-0">VS</span>
+
+          <div class="flex flex-col items-center">
+            <img
+              src="https://media-hosting.imagekit.io/2ea9d44f345c4bd0/Screenshot_2025-04-11-22-13-58-423_com.whatsapp-edit.jpg?Expires=1839014066&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UJlv2K1FlUKYeBB1HGEgqDxLV2ptdHHDS6DtsAwHeCgrNHUdG5C-13nyvsZhEFcmfhdJpqvG7nkKDolLJJsZAOtapvnFQ~d10LAt7sLOaM4ei5kTLhowpNwzZhiZ2XSDAG6cfzG-jRMMkGuhV8W3c4~baZEofLSAVSOgMrfNeqJQ5eIyfX1NHr8LKr4D3JO6QiYzMwiuUBEb4IpLzt77LSaTdGzVWzfjIgsrjbPP8x4oOG9eQ7ir0E3FipN6qGsnkY~vadMNZMDf3LlMbr7EwJ3fF2g23eAsIq3IxNN-7Hufjt12gue7i~PO6yMKNgumxHMbMMjWY3KMdrU25xmLgQ__"
+              alt="Logo Celtic"
+              class="w-24 h-24 rounded-full border-4 border-green-400 object-cover mb-2"
+            />
+            <h3 class="text-xl font-bold text-green-400">Celtic</h3>
+          </div>
         </div>
       </section>
 
@@ -60,17 +83,28 @@
         <h2 class="text-2xl font-bold mb-4">Últimas Notícias</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="bg-white text-black p-4 rounded shadow">
-            <img src="https://placehold.co/300x200" alt="Nova Recrutamento" class="w-full h-48 object-cover rounded mb-4"/>
+            <img
+              src="https://placehold.co/300x200"
+              alt="Recrutamento"
+              class="w-full h-48 object-cover rounded mb-4"
+            />
             <h3 class="text-xl font-bold">CF Olivais procura jogadores</h3>
             <p class="text-gray-700">
-              O CF Olivais está à procura de novos talentos para integrar a sua equipa. Se tens paixão pelo futebol e queres fazer parte de um clube dedicado, esta é a tua oportunidade. Inscreve-te já!
+              O CF Olivais está à procura de novos talentos para integrar a sua equipa.
+              Se tens paixão pelo futebol, esta é a tua oportunidade. Junta-te a nós!
             </p>
           </div>
+
           <div class="bg-white text-black p-4 rounded shadow">
-            <img src="https://i.postimg.cc/Y9ctxZvd/Screenshot-2025-04-11-15-49-36-666-com-miui-gallery-edit-1.jpg" alt="Campo fechado" class="w-full h-48 object-cover rounded mb-4"/>
+            <img
+              src="https://i.postimg.cc/Y9ctxZvd/Screenshot-2025-04-11-15-49-36-666-com-miui-gallery-edit-1.jpg"
+              alt="Campo fechado"
+              class="w-full h-48 object-cover rounded mb-4"
+            />
             <h3 class="text-xl font-bold">Campo do CF Olivais está fechado</h3>
             <p class="text-gray-700">
-              Informamos que o campo do CF Olivais está temporariamente fechado para manutenção. Em breve, o campo estará em melhores condições para receber os nossos jogadores.
+              O campo encontra-se temporariamente encerrado para manutenção.
+              Em breve reabriremos com melhores condições para todos!
             </p>
           </div>
         </div>
@@ -84,9 +118,9 @@
     </footer>
 
     <script>
-      document.getElementById('menu-button').addEventListener('click', function () {
-        var menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
+      document.getElementById("menu-button").addEventListener("click", function () {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("hidden");
       });
     </script>
   </body>
