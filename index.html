@@ -1,233 +1,161 @@
 <html lang="pt">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   CF Olivais Futsal Clube
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-gray-100">
-  <!-- Header -->
-  <header class="bg-white shadow">
-   <div class="container mx-auto flex items-center justify-between p-4">
-    <div class="flex items-center">
-     <div class="relative w-16 h-16 rounded-full border-4 border-black flex items-center justify-center">
-      <div class="absolute inset-0 flex items-center justify-center">
-       <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center">
-        <img alt="Emblema de águia negra" class="w-8 h-8" src="https://storage.googleapis.com/a1aa/image/lVDX52PizJSq2s2SH2oPQSLLtZLD41OQkY8FkY1PzlU.jpg"/>
-       </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CF Olivais Futsal Clube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center">
+          <div class="relative w-16 h-16 rounded-full border-4 border-black flex items-center justify-center">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center">
+                <img
+                  alt="Emblema de águia negra"
+                  class="w-8 h-8"
+                  src="https://storage.googleapis.com/a1aa/image/lVDX52PizJSq2s2SH2oPQSLLtZLD41OQkY8FkY1PzlU.jpg"
+                />
+              </div>
+            </div>
+          </div>
+          <h1 class="ml-4 text-2xl font-bold text-gray-800">CF Olivais Futsal Clube</h1>
+        </div>
+        <nav>
+          <ul class="flex space-x-4">
+            <li>
+              <a class="text-gray-800 hover:text-red-700" href="#team">Equipe</a>
+            </li>
+            <li>
+              <a class="text-gray-800 hover:text-red-700" href="#players">Jogadores</a>
+            </li>
+            <li>
+              <a class="text-gray-800 hover:text-red-700" href="#games">Próximos Jogos</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="absolute inset-0 flex items-center justify-center">
-       <div class="absolute top-0 left-0 w-1/2 h-1/2 bg-red-700 rounded-tl-full">
-       </div>
-       <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-red-700 rounded-tr-full">
-       </div>
-       <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-white rounded-bl-full">
-       </div>
-       <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-white rounded-br-full">
-       </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+      <!-- Team Section -->
+      <section class="my-8" id="team">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Informações da Equipe</h2>
+        <p class="text-gray-700">
+          O CF Olivais Futsal Clube é uma equipe dedicada ao futsal, com uma história rica e uma paixão pelo esporte. Nossa missão é promover o futsal e desenvolver talentos locais.
+        </p>
+      </section>
+
+      <!-- Players Section -->
+      <section class="my-8" id="players">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Jogadores</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Player 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player1')">
+            <img alt="Foto de Elisandro Borges" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Elisandro Borges</h3>
+            <p class="text-gray-600">Posição: Goleiro</p>
+          </div>
+          
+          <!-- Player 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player2')">
+            <img alt="Foto de David" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">David</h3>
+            <p class="text-gray-600">Posição: Defensor</p>
+          </div>
+
+          <!-- Player 3 (Wilson) -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player3')">
+            <img alt="Foto de Wilson" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Wilson</h3>
+            <p class="text-gray-600">Posição: Defensor</p>
+          </div>
+
+          <!-- Add more players here -->
+        </div>
+      </section>
+
+      <!-- Next Games Section -->
+      <section class="my-8" id="games">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Próximos Jogos</h2>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">CF Olivais vs. Celtic</h3>
+              <p class="text-gray-700">Data: 15/04/2023</p>
+              <p class="text-gray-700">Hora: 16:00</p>
+            </div>
+            <div>
+              <button class="bg-red-700 text-white px-4 py-2 rounded-lg">Ver Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow mt-8">
+      <div class="container mx-auto p-4 text-center">
+        <p class="text-gray-700">© 2023 CF Olivais Futsal Clube. Todos os direitos reservados.</p>
       </div>
-      <div class="absolute top-1 text-white text-xs font-bold">
-       CF OLIVAIS
+    </footer>
+
+    <!-- Modals de Detalhes dos Jogadores -->
+    <div id="player1-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+        <h3 class="text-2xl font-bold text-gray-800">Detalhes de Elisandro Borges</h3>
+        <p class="text-gray-700 mt-4">Idade: 25 anos</p>
+        <p class="text-gray-700">Data de Nascimento: 10/01/1998</p>
+        <p class="text-gray-700">Altura: 1,85m</p>
+        <div class="mt-6 text-right">
+          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player1')">
+            Fechar
+          </button>
+        </div>
       </div>
-      <div class="absolute top-4 left-1 text-white text-xs font-bold">
-       20
-      </div>
-      <div class="absolute top-4 right-1 text-white text-xs font-bold">
-       23
-      </div>
-      <div class="absolute bottom-1 text-black text-xs font-bold">
-       FUTSAL CLUBE
-      </div>
-     </div>
-     <h1 class="ml-4 text-2xl font-bold text-gray-800">
-      CF Olivais Futsal Clube
-     </h1>
     </div>
-    <nav>
-     <ul class="flex space-x-4">
-      <li>
-       <a class="text-gray-800 hover:text-red-700" href="#team">
-        Equipe
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-800 hover:text-red-700" href="#players">
-        Jogadores
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-800 hover:text-red-700" href="#games">
-        Próximos Jogos
-       </a>
-      </li>
-     </ul>
-    </nav>
-   </div>
-  </header>
-  <!-- Main Content -->
-  <main class="container mx-auto p-4">
-   <!-- Team Section -->
-   <section class="my-8" id="team">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">
-     Informações da Equipe
-    </h2>
-    <p class="text-gray-700">
-     O CF Olivais Futsal Clube é uma equipe dedicada ao futsal, com uma história rica e uma paixão pelo esporte. Nossa missão é promover o futsal e desenvolver talentos locais.
-    </p>
-   </section>
-   <!-- Players Section -->
-   <section class="my-8" id="players">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">
-     Jogadores
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-     <!-- Player 1 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Elisandro Borges" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Elisandro Borges
-      </h3>
-      <p class="text-gray-700">
-       Posição: Goleiro
-      </p>
-     </div>
-     <!-- Player 2 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de David" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       David
-      </h3>
-      <p class="text-gray-700">
-       Posição: Defensor
-      </p>
-     </div>
-     <!-- Player 3 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Adilson Lobo" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/BnvbzASNnt-nNyhj_fJkucOO2TPh1lq5N4REsuuHSHA.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Adilson Lobo
-      </h3>
-      <p class="text-gray-700">
-       Posição: Defensor
-      </p>
-     </div>
-     <!-- Player 4 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Chiquinho" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Chiquinho
-      </h3>
-      <p class="text-gray-700">
-       Posição: Defensor
-      </p>
-     </div>
-     <!-- Player 5 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Wilson" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Wilson
-      </h3>
-      <p class="text-gray-700">
-       Posição: Meio-campista
-      </p>
-     </div>
-     <!-- Player 6 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Diogo Lopes" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Diogo Lopes
-      </h3>
-      <p class="text-gray-700">
-       Posição: Ala
-      </p>
-     </div>
-     <!-- Player 7 -->
-     <div class="bg-white p-4 rounded-lg shadow">
-      <img alt="Foto de Zé Barão" class="w-full h-40 object-cover rounded-lg mb-4" height="150" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" width="150"/>
-      <h3 class="text-xl font-bold text-gray-800">
-       Zé Barão
-      </h3>
-      <p class="text-gray-700">
-       Posição: Pivô
-      </p>
-     </div>
+
+    <div id="player2-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+        <h3 class="text-2xl font-bold text-gray-800">Detalhes de David</h3>
+        <p class="text-gray-700 mt-4">Idade: 18 anos</p>
+        <p class="text-gray-700">Data de Nascimento: 29/09/2005</p>
+        <p class="text-gray-700">Altura: 1,81m</p>
+        <div class="mt-6 text-right">
+          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player2')">
+            Fechar
+          </button>
+        </div>
+      </div>
     </div>
-   </section>
-   <!-- Next Games Section -->
-   <section class="my-8" id="games">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">
-     Próximos Jogos
-    </h2>
-    <div class="bg-white p-4 rounded-lg shadow">
-     <div class="flex items-center justify-between mb-4">
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        CF Olivais vs. Celtic
-       </h3>
-       <p class="text-gray-700">
-        Data: 15/04/2023
-       </p>
-       <p class="text-gray-700">
-        Hora: 16:00
-       </p>
+
+    <div id="player3-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+        <h3 class="text-2xl font-bold text-gray-800">Detalhes de Wilson</h3>
+        <p class="text-gray-700 mt-4">Idade: 13 anos</p>
+        <p class="text-gray-700">Data de Nascimento: 16/11/2011</p>
+        <p class="text-gray-700">Altura: 1,70m</p>
+        <div class="mt-6 text-right">
+          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player3')">
+            Fechar
+          </button>
+        </div>
       </div>
-      <div>
-       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
-        Comprar Ingressos
-       </button>
-      </div>
-     </div>
-     <div class="flex items-center justify-between mb-4">
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        CF Olivais vs. Equipe A
-       </h3>
-       <p class="text-gray-700">
-        Data: 15/10/2023
-       </p>
-       <p class="text-gray-700">
-        Hora: 18:00
-       </p>
-      </div>
-      <div>
-       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
-        Comprar Ingressos
-       </button>
-      </div>
-     </div>
-     <div class="flex items-center justify-between mb-4">
-      <div>
-       <h3 class="text-xl font-bold text-gray-800">
-        CF Olivais vs. Equipe B
-       </h3>
-       <p class="text-gray-700">
-        Data: 22/10/2023
-       </p>
-       <p class="text-gray-700">
-        Hora: 20:00
-       </p>
-      </div>
-      <div>
-       <button class="bg-red-700 text-white px-4 py-2 rounded-lg">
-        Comprar Ingressos
-       </button>
-      </div>
-     </div>
-     <!-- Add more games as needed -->
     </div>
-   </section>
-  </main>
-  <!-- Footer -->
-  <footer class="bg-white shadow mt-8">
-   <div class="container mx-auto p-4 text-center">
-    <p class="text-gray-700">
-     © 2023 CF Olivais Futsal Clube. Todos os direitos reservados.
-    </p>
-   </div>
-  </footer>
- </body>
+
+    <script>
+      function showPlayerDetails(playerId) {
+        document.getElementById(playerId + '-details').classList.remove('hidden');
+      }
+
+      function closePlayerDetails(playerId) {
+        document.getElementById(playerId + '-details').classList.add('hidden');
+      }
+    </script>
+  </body>
 </html>
