@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
@@ -12,9 +13,9 @@
     <header class="bg-white shadow">
       <div class="container mx-auto flex items-center justify-between p-4">
         <div class="flex items-center">
-          <div class="relative w-16 h-16 rounded-full border-4 border-black flex items-center justify-center">
+          <div class="relative w-16 h-16 rounded-full border-4 border-red-700 flex items-center justify-center">
             <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full border-4 border-red-700 flex items-center justify-center">
                 <img
                   alt="Emblema de águia negra"
                   class="w-8 h-8"
@@ -23,159 +24,90 @@
               </div>
             </div>
           </div>
-          <h1 class="ml-4 text-2xl font-bold text-gray-800">CF Olivais Futsal Clube</h1>
+          <h1 class="ml-4 text-2xl font-bold text-red-700">CF Olivais Futsal Clube</h1>
         </div>
         <nav>
           <ul class="flex space-x-4">
-            <li>
-              <a class="text-gray-800 hover:text-red-700" href="#team">Equipe</a>
-            </li>
-            <li>
-              <a class="text-gray-800 hover:text-red-700" href="#players">Jogadores</a>
-            </li>
-            <li>
-              <a class="text-gray-800 hover:text-red-700" href="#games">Próximos Jogos</a>
-            </li>
+            <li><a class="text-gray-800 hover:text-red-700" href="#noticias">Notícias</a></li>
+            <li><a class="text-gray-800 hover:text-red-700" href="#sobre">Sobre nós</a></li>
+            <li><a class="text-gray-800 hover:text-red-700" href="#games">Jogos</a></li>
+            <li><a class="text-gray-800 hover:text-red-700" href="#players">Jogadores</a></li>
+            <li><a class="text-gray-800 hover:text-red-700" href="#join">Junta-te a nós</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-4">
-      <!-- Team Section -->
-      <section class="my-8" id="team">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Informações da Equipe</h2>
-        <p class="text-gray-700">
-          O CF Olivais Futsal Clube é uma equipe dedicada ao futsal, com uma história rica e uma paixão pelo esporte. Nossa missão é promover o futsal e desenvolver talentos locais.
-        </p>
-      </section>
+    <!-- Notícias -->
+    <section id="noticias" class="container mx-auto p-4 mt-6">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Notícias</h2>
+      <p class="text-gray-700 mb-2">O CF Olivais está à procura de novos jogadores talentosos para reforçar a sua equipa!</p>
+      <p class="text-gray-700">Se tens paixão pelo futsal e queres fazer parte de uma equipa ambiciosa, junta-te a nós hoje!</p>
+    </section>
 
-      <!-- Players Section -->
-      <section class="my-8" id="players">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Jogadores</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <!-- Player 1 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player1')">
-            <img alt="Foto de Elisandro Borges" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Elisandro Borges</h3>
-            <p class="text-gray-600">Posição: Goleiro</p>
-          </div>
-          
-          <!-- Player 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player2')">
-            <img alt="Foto de David" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">David</h3>
-            <p class="text-gray-600">Posição: Defensor</p>
-          </div>
+    <!-- Jogadores -->
+    <section id="players" class="container mx-auto p-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Jogadores</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Jogador Cards -->
+        <script>
+          const jogadores = [
+            { nome: "David", data: "28/09/2005", altura: "1,81", posicao: "Defesa", imagem: "https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" },
+            { nome: "Wilson", data: "16/11/2011", altura: "1,70", posicao: "Médio", imagem: "https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" },
+            { nome: "Elisandro", data: "15/08/2012", altura: "1,70", posicao: "Guarda-Redes", imagem: "https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" },
+            { nome: "Adilson", data: "22/08/2012", altura: "1,52", posicao: "Defensor", imagem: "https://via.placeholder.com/300x200.png?text=Adilson" },
+            { nome: "Diogo Lopes", data: "24/02/2010", altura: "1,55", posicao: "Ala", imagem: "https://via.placeholder.com/300x200.png?text=Diogo+Lopes" }
+          ];
 
-          <!-- Player 3 (Wilson) -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player3')">
-            <img alt="Foto de Wilson" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Wilson</h3>
-            <p class="text-gray-600">Posição: Defensor</p>
-          </div>
-
-          <!-- Player 4 (Novo Elisandro) -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player4')">
-            <img alt="Foto de Elisandro" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Elisandro</h3>
-            <p class="text-gray-600">Posição: Defensor</p>
-          </div>
-
-          <!-- Add more players here -->
-        </div>
-      </section>
-
-      <!-- Next Games Section -->
-      <section class="my-8" id="games">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Próximos Jogos</h2>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <div class="flex items-center justify-between mb-4">
-            <div>
-              <h3 class="text-xl font-bold text-gray-800">CF Olivais vs. Celtic</h3>
-              <p class="text-gray-700">Data: 15/04/2023</p>
-              <p class="text-gray-700">Hora: 16:00</p>
-            </div>
-            <div>
-              <button class="bg-red-700 text-white px-4 py-2 rounded-lg">Ver Detalhes</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white shadow mt-8">
-      <div class="container mx-auto p-4 text-center">
-        <p class="text-gray-700">© 2023 CF Olivais Futsal Clube. Todos os direitos reservados.</p>
+          jogadores.forEach((jogador, i) => {
+            document.write(`
+              <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="mostrarDetalhes(${i})">
+                <img src="${jogador.imagem}" alt="Foto de ${jogador.nome}" class="w-full h-40 object-cover rounded-lg mb-4" />
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">${jogador.nome}</h3>
+                <p class="text-gray-600">Posição: ${jogador.posicao}</p>
+              </div>
+            `);
+          });
+        </script>
       </div>
-    </footer>
+    </section>
 
-    <!-- Modals de Detalhes dos Jogadores -->
-    <div id="player1-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
-      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h3 class="text-2xl font-bold text-gray-800">Detalhes de Elisandro Borges</h3>
-        <p class="text-gray-700 mt-4">Idade: 25 anos</p>
-        <p class="text-gray-700">Data de Nascimento: 10/01/1998</p>
-        <p class="text-gray-700">Altura: 1,85m</p>
-        <div class="mt-6 text-right">
-          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player1')">
-            Fechar
-          </button>
-        </div>
+    <!-- Modal Detalhes -->
+    <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+        <h3 id="modal-nome" class="text-2xl font-bold text-gray-800"></h3>
+        <p id="modal-data" class="text-gray-700 mt-2"></p>
+        <p id="modal-altura" class="text-gray-700"></p>
+        <button onclick="fecharModal()" class="mt-4 bg-red-700 text-white px-4 py-2 rounded-full hover:bg-red-600">Fechar</button>
       </div>
     </div>
 
-    <div id="player2-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
-      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h3 class="text-2xl font-bold text-gray-800">Detalhes de David</h3>
-        <p class="text-gray-700 mt-4">Idade: 18 anos</p>
-        <p class="text-gray-700">Data de Nascimento: 29/09/2005</p>
-        <p class="text-gray-700">Altura: 1,81m</p>
-        <div class="mt-6 text-right">
-          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player2')">
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="player3-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
-      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h3 class="text-2xl font-bold text-gray-800">Detalhes de Wilson</h3>
-        <p class="text-gray-700 mt-4">Idade: 13 anos</p>
-        <p class="text-gray-700">Data de Nascimento: 16/11/2011</p>
-        <p class="text-gray-700">Altura: 1,70m</p>
-        <div class="mt-6 text-right">
-          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player3')">
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div id="player4-details" class="hidden bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center z-50">
-      <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h3 class="text-2xl font-bold text-gray-800">Detalhes de Elisandro</h3>
-        <p class="text-gray-700 mt-4">Idade: 13 anos</p>
-        <p class="text-gray-700">Data de Nascimento: 15/08/2012</p>
-        <p class="text-gray-700">Altura: 1,70m</p>
-        <div class="mt-6 text-right">
-          <button class="bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-all duration-300" onclick="closePlayerDetails('player4')">
-            Fechar
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Junta-te a nós -->
+    <section id="join" class="container mx-auto p-4 mt-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Junta-te a nós</h2>
+      <p class="text-gray-700 mb-2">Queres fazer parte do CF Olivais? Preenche o formulário abaixo e junta-te a uma equipa vencedora!</p>
+      <a href="https://forms.gle/gHxAUGNWfrYCwH3r7" target="_blank" class="inline-block mt-4 bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-600">Preencher formulário</a>
+    </section>
 
     <script>
-      function showPlayerDetails(playerId) {
-        document.getElementById(playerId + '-details').classList.remove('hidden');
+      const jogadores = [
+        { nome: "David", data: "28/09/2005", altura: "1,81" },
+        { nome: "Wilson", data: "16/11/2011", altura: "1,70" },
+        { nome: "Elisandro", data: "15/08/2012", altura: "1,70" },
+        { nome: "Adilson", data: "22/08/2012", altura: "1,52" },
+        { nome: "Diogo Lopes", data: "24/02/2010", altura: "1,55" }
+      ];
+
+      function mostrarDetalhes(index) {
+        const jogador = jogadores[index];
+        document.getElementById("modal-nome").innerText = `Detalhes de ${jogador.nome}`;
+        document.getElementById("modal-data").innerText = `Data de Nascimento: ${jogador.data}`;
+        document.getElementById("modal-altura").innerText = `Altura: ${jogador.altura}m`;
+        document.getElementById("modal").classList.remove("hidden");
       }
 
-      function closePlayerDetails(playerId) {
-        document.getElementById(playerId + '-details').classList.add('hidden');
+      function fecharModal() {
+        document.getElementById("modal").classList.add("hidden");
       }
     </script>
   </body>
