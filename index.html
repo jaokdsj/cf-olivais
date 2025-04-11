@@ -7,14 +7,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-100">
+  <body class="bg-red-50">
     <!-- Header -->
-    <header class="bg-white shadow">
+    <header class="bg-red-600 shadow">
       <div class="container mx-auto flex items-center justify-between p-4">
         <div class="flex items-center">
-          <div class="relative w-16 h-16 rounded-full border-4 border-black flex items-center justify-center">
+          <div class="relative w-16 h-16 rounded-full border-4 border-white flex items-center justify-center">
             <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full border-4 border-white flex items-center justify-center">
                 <img
                   alt="Emblema de águia negra"
                   class="w-8 h-8"
@@ -23,98 +23,29 @@
               </div>
             </div>
           </div>
-          <h1 class="ml-4 text-2xl font-bold text-gray-800">CF Olivais Futsal Clube</h1>
+          <h1 class="ml-4 text-2xl font-bold text-white">CF Olivais Futsal Clube</h1>
         </div>
-        <nav>
+
+        <!-- Menu lateral -->
+        <div class="lg:hidden">
+          <button class="text-white text-3xl" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav id="menu" class="hidden lg:flex space-x-4">
           <ul class="flex space-x-4">
-            <li>
-              <button class="text-gray-800 hover:text-red-700" onclick="toggleMenu('news')">Últimas Notícias</button>
-            </li>
-            <li>
-              <button class="text-gray-800 hover:text-red-700" onclick="toggleMenu('team')">Equipe</button>
-            </li>
-            <li>
-              <button class="text-gray-800 hover:text-red-700" onclick="toggleMenu('players')">Jogadores</button>
-            </li>
-            <li>
-              <button class="text-gray-800 hover:text-red-700" onclick="toggleMenu('games')">Próximos Jogos</button>
-            </li>
+            <li><button class="text-white hover:text-yellow-400" onclick="toggleSection('news')">Últimas Notícias</button></li>
+            <li><button class="text-white hover:text-yellow-400" onclick="toggleSection('team')">Equipe</button></li>
+            <li><button class="text-white hover:text-yellow-400" onclick="toggleSection('players')">Jogadores</button></li>
+            <li><button class="text-white hover:text-yellow-400" onclick="toggleSection('games')">Próximos Jogos</button></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-4">
-      <!-- News Section (Visible on initial page load) -->
-      <section id="news" class="my-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Últimas Notícias</h2>
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h3 class="text-2xl font-bold text-gray-800">Campo fechado para manutenção</h3>
-          <p class="text-gray-600 mt-4">O nosso campo foi temporariamente fechado para manutenção. Em breve estará de volta para mais jogos emocionantes!</p>
-          <img src="https://media-hosting.imagekit.io/919702b66ffa41f7/Screenshot_2025-04-11-15-49-36-666_com.miui.gallery-edit%20(1).jpg?Expires=1838991484&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t38kq9~sK8ZqImXcg8J-eVxelBo-g5TUnpbEL2-e8A8rAvl73NbEw2309XxhLT6fRAe5MteDMxlg~1G6jzEDQDwj9wOTbsiR4FrYH-lO4bYOw8i7hDp-pjWdhlBk8YU1ktCmyRX5UAb-XxVp1vGfjZrMu-yrbigeRcBPe9EfLyJq1c-UlyIHmgkg2~38eBBEVJOsBu-6SoVBdNJ~3ntFttkXVAKmFiJSSzRvkKodKZ4PgwNLglIjJJn7LFBZObzxBUg39A7DbUChGAv00iqo6Hx2iOOokqv-hK9w2jbhuVwbfgvJ4Zt15bdMNenaZ6fzRndSyfmKTRbH51ZsFWWi9w__" alt="Campo fechado para manutenção" class="w-full h-auto rounded-lg mt-4" />
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-bold text-gray-800">Procuramos novos jogadores</h3>
-          <p class="text-gray-600 mt-4">O CF Olivais Futsal Clube está à procura de novos talentos! Se tens paixão pelo futsal e queres fazer parte da nossa equipa, entra em contacto connosco!</p>
-        </div>
-      </section>
-
-      <!-- Hidden Sections (Initially hidden) -->
-      <section id="team" class="hidden my-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Equipe</h2>
-        <p>Informações sobre a nossa equipa.</p>
-      </section>
-
-      <section id="players" class="hidden my-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Jogadores</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <!-- Player 1 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player1')">
-            <img alt="Foto de David" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/d8vRT11xno0hUxiMnEyqoDZ971s2hroxk2Lga96BEsg.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">David</h3>
-            <p class="text-gray-600">Posição: Defesa</p>
-          </div>
-
-          <!-- Player 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player2')">
-            <img alt="Foto de Wilson" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/OBv3I5aEgZmKEmXi3TI0JzitaDs3lre_F_8E9yvQXMQ.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Wilson</h3>
-            <p class="text-gray-600">Posição: Médio</p>
-          </div>
-
-          <!-- Player 3 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player3')">
-            <img alt="Foto de Elisandro" class="w-full h-40 object-cover rounded-lg mb-4" src="https://storage.googleapis.com/a1aa/image/Ho4ND0N5N4ScDLceMLHzIA3A-oDGwdZDESHlgcGziU0.jpg" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Elisandro Borges</h3>
-            <p class="text-gray-600">Posição: Guarda-redes</p>
-          </div>
-
-          <!-- Player 4 (Diogo Lopes) -->
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="showPlayerDetails('player4')">
-            <img alt="Foto de Diogo Lopes" class="w-full h-40 object-cover rounded-lg mb-4" src="https://www.zerozero.pt/img/jogadores/new/82/80/2088280_diogo_lopes_20241005201304.png" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Diogo Lopes</h3>
-            <p class="text-gray-600">Posição: Ala</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="games" class="hidden my-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Próximos Jogos</h2>
-        <p>Detalhes sobre os próximos jogos da nossa equipa.</p>
-      </section>
-    </main>
-
-    <script>
-      // Função para alternar a visibilidade das seções
-      function toggleMenu(sectionId) {
-        // Esconde todas as seções
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => section.classList.add('hidden'));
-        
-        // Exibe a seção selecionada
-        document.getElementById(sectionId).classList.remove('hidden');
-      }
-    </script>
-  </body>
-</html>
+    <!-- Menu Lateral (Mobile) -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden">
+      <div class="bg-white p-4 w-2/3 h-full">
+        <ul>
+          <li><button class="text-red-600 hover:text-yellow-400" onclick="toggleSection('news')">Últimas Notícias</button></li>
+          <li><button class="text-red-600 hover:text-yellow-400" onclick="toggleSection('team')">Equipe</button></li>
+          <li><button class="text-red-600 hover:text-yellow-400" onclick="toggleSection('players')">Jogadores</button></li>
+          <li><button class="text-red-600 hover:text-yellow-400
