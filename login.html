@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área de Jogador - CF Olivais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+    header, nav, main {
+      padding: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Área de Jogador - CF Olivais</h1>
+  </header>
+  <nav>
+    <a href="#" onclick="navigate('chat')">Chat da Equipa</a>
+    <a href="#" onclick="navigate('faltas')">Justificação de Faltas</a>
+    <a href="#" onclick="navigate('videos')">Vídeos Educativos</a>
+  </nav>  <main>
+    <section id="login-section">
+      <h2>Login do Jogador</h2>
+      <input type="text" id="playerIdInput" placeholder="Insere o teu ID único" />
+      <button onclick="login()">Entrar</button>
+    </section><section id="conteudo" class="hidden">
+  <div id="chat" class="hidden">
+    <h3>Chat da Equipa</h3>
+    <p>Em breve: Chat em tempo real!</p>
+  </div>
+  <div id="faltas" class="hidden">
+    <h3>Justificação de Faltas</h3>
+    <form>
+      <label>Motivo:</label><br />
+      <textarea rows="5" cols="30"></textarea><br />
+      <button type="submit">Justificar</button>
+    </form>
+  </div>
+  <div id="videos" class="hidden">
+    <h3>Vídeos Educativos</h3>
+    <h4>Passe e Passe Alto</h4>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/N8QukK1C_6I" frameborder="0" allowfullscreen></iframe>
+    <h4>Visão de Jogo</h4>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/1s5we84f60s" frameborder="0" allowfullscreen></iframe>
+    <h4>Remate e Finalização</h4>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/L3tVYFuNSt4" frameborder="0" allowfullscreen></iframe>
+    <h4>Defesa, Cortes, Carrinho</h4>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/Uv_B2RPqVaI" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+  </main>  <script>
+    const idsValidos = [
+      "ELISANDRO-9134",
+      "ADILSON-7290",
+      "WILSON-2156",
+      "DIOGO-6012",
+      "DAVID-8842",
+      "RODRIGO-1378"
+    ];
+
+    function login() {
+      const input = document.getElementById("playerIdInput").value.trim().toUpperCase();
+      if (idsValidos.includes(input)) {
+        localStorage.setItem("jogadorAutenticado", "sim");
+        document.getElementById("login-section").classList.add("hidden");
+        document.getElementById("conteudo").classList.remove("hidden");
+      } else {
+        alert("ID inválido. Tenta novamente.");
+      }
+    }
+
+    function navigate(secao) {
+      if (localStorage.getItem("jogadorAutenticado") !== "sim") {
+        alert("Tens de fazer login primeiro.");
+        return;
+      }
+      ["chat", "faltas", "videos"].forEach(id => {
+        document.getElementById(id).classList.add("hidden");
+      });
+      document.getElementById(secao).classList.remove("hidden");
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem("jogadorAutenticado") === "sim") {
+        document.getElementById("login-section").classList.add("hidden");
+        document.getElementById("conteudo").classList.remove("hidden");
+      }
+    }
+  </script></body>
+</html>
