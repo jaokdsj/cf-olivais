@@ -1,105 +1,74 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Área de Jogador - CF Olivais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - CF Olivais</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f0f0f0;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    header, nav, main {
-      padding: 20px;
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
     }
-    .hidden {
-      display: none;
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0074d9;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Área de Jogador - CF Olivais</h1>
-  </header>
-  <nav>
-    <a href="#" onclick="navigate('chat')">Chat da Equipa</a>
-    <a href="#" onclick="navigate('faltas')">Justificação de Faltas</a>
-    <a href="#" onclick="navigate('videos')">Vídeos Educativos</a>
-  </nav>  <main>
-    <section id="login-section">
-      <h2>Login do Jogador</h2>
-      <input type="text" id="playerIdInput" placeholder="Insere o teu ID único" />
-      <button onclick="login()">Entrar</button>
-    </section><section id="conteudo" class="hidden">
-  <div id="chat" class="hidden">
-    <h3>Chat da Equipa</h3>
-    <p>Em breve: Chat em tempo real!</p>
+  <div class="login-container">
+    <h2>Área de Jogador</h2>
+    <p>Insere o teu ID de jogador:</p>
+    <input type="text" id="playerID" placeholder="Ex: ELIS-9271" />
+    <br />
+    <button onclick="checkLogin()">Entrar</button>
   </div>
-  <div id="faltas" class="hidden">
-    <h3>Justificação de Faltas</h3>
-    <form>
-      <label>Motivo:</label><br />
-      <textarea rows="5" cols="30"></textarea><br />
-      <button type="submit">Justificar</button>
-    </form>
-  </div>
-  <div id="videos" class="hidden">
-    <h3>Vídeos Educativos</h3>
-    <h4>Passe e Passe Alto</h4>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/N8QukK1C_6I" frameborder="0" allowfullscreen></iframe>
-    <h4>Visão de Jogo</h4>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/1s5we84f60s" frameborder="0" allowfullscreen></iframe>
-    <h4>Remate e Finalização</h4>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/L3tVYFuNSt4" frameborder="0" allowfullscreen></iframe>
-    <h4>Defesa, Cortes, Carrinho</h4>
-    <iframe width="300" height="170" src="https://www.youtube.com/embed/Uv_B2RPqVaI" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
 
-  </main>  <script>
-    const idsValidos = [
-      "ELISANDRO-9134",
-      "ADILSON-7290",
-      "WILSON-2156",
-      "DIOGO-6012",
-      "DAVID-8842",
-      "RODRIGO-1378"
+  <script>
+    const validIDs = [
+      "ELIS-9271", // Elisandro Borges
+      "ADIL-5824", // Adilson Lobo
+      "WILS-3018", // Wilson Fonseca
+      "DIOG-6640", // Diogo Lopes
+      "DAVI-1183", // David Neves
+      "RODR-7745"  // Rodrigo Gomes
     ];
 
-    function login() {
-      const input = document.getElementById("playerIdInput").value.trim().toUpperCase();
-      if (idsValidos.includes(input)) {
-        localStorage.setItem("jogadorAutenticado", "sim");
-        document.getElementById("login-section").classList.add("hidden");
-        document.getElementById("conteudo").classList.remove("hidden");
+    function checkLogin() {
+      const input = document.getElementById("playerID").value.trim().toUpperCase();
+      if (validIDs.includes(input)) {
+        localStorage.setItem("loggedInID", input); // Guardar login
+        window.location.href = "area-jogador.html";
       } else {
-        alert("ID inválido. Tenta novamente.");
+        alert("ID inválido!");
       }
     }
-
-    function navigate(secao) {
-      if (localStorage.getItem("jogadorAutenticado") !== "sim") {
-        alert("Tens de fazer login primeiro.");
-        return;
-      }
-      ["chat", "faltas", "videos"].forEach(id => {
-        document.getElementById(id).classList.add("hidden");
-      });
-      document.getElementById(secao).classList.remove("hidden");
-    }
-
-    window.onload = () => {
-      if (localStorage.getItem("jogadorAutenticado") === "sim") {
-        document.getElementById("login-section").classList.add("hidden");
-        document.getElementById("conteudo").classList.remove("hidden");
-      }
-    }
-  </script></body>
+  </script>
+</body>
 </html>
