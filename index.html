@@ -1,163 +1,138 @@
-<html lang="pt"> <head>  
-  <meta charset="utf-8"/>  
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>  
-  <title>  
-   CF Olivais  
-  </title>  
-  <script src="https://cdn.tailwindcss.com">  
-  </script>  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>  
-  <style>  
-   body {  
-            font-family: 'Roboto', sans-serif;  
-        }  .cartaz {  
-        background-color: #333;  
-        color: white;  
-        border-radius: 10px;  
-        padding: 20px;  
-        text-align: center;  
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
-    }  .cartaz img {  
-    width: 100px;  
-    height: 100px;  
-    border-radius: 50%;  
-}  
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortnite Fan Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b0f2b;
+            color: #ffffff;
+        }
 
-.cartaz h3 {
-font-size: 1.5rem;
-font-weight: bold;
-margin-top: 10px;
-}
+        header {
+            background: linear-gradient(90deg, #7b2cff, #00d4ff);
+            padding: 30px;
+            text-align: center;
+        }
 
-.cartaz p {
-font-size: 1.2rem;
-margin-top: 10px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
 
-.cartaz a {
-margin-top: 20px;
-padding: 10px 20px;
-background-color: #f5a623;
-color: white;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-}
+        nav {
+            background-color: #11163a;
+            padding: 15px;
+            text-align: center;
+        }
 
-  </style>  
- </head>  
- <body class="bg-gradient-to-r from-red-500 to-yellow-500 text-white">  
-  <header class="bg-red-700 p-4">  
-   <div class="container mx-auto flex justify-between items-center">  
-    <div class="flex items-center space-x-4">  
-     <img alt="Logo do CF Olivais" class="h-12 w-12 rounded-full" src="https://i.postimg.cc/130LNxvs/Screenshot-2025-04-11-13-13-14-135-com-miui-gallery-edit.jpg"/>  
-     <h1 class="text-3xl font-bold">  
-      CF Olivais  
-     </h1>  
-    </div>  
-    <button class="text-white text-2xl focus:outline-none" id="menu-button">  
-     <i class="fas fa-bars">  
-     </i>  
-    </button>  
-    <nav class="hidden" id="menu">  
-     <ul class="flex flex-col space-y-4 mt-4">  
-      <li>  
-       <a class="hover:underline" href="https://cfolivais.pt/jogadores">  
-        Jogadores  
-       </a>  
-      </li>  
-      <li>  
-       <a class="hover:underline" href="https://cfolivais.pt/sobre">  
-        Sobre  
-       </a>  
-      </li>  
-     </ul>  
-    </nav>  
-   </div>  
-  </header>  
-  <main class="container mx-auto p-4">  
-   <!-- Início -->  
-   <section class="my-8 text-center">  
-    <h2 class="text-4xl font-bold mb-4">  
-     Bem-vindo ao CF Olivais  
-    </h2>  
-    <p class="text-xl mb-4">  
-     O clube de futebol que une paixão, dedicação e talento. Junte-se a nós e faça parte desta grande família!  
-    </p>  
-    <img alt="Imagem de boas-vindas com jogadores de futebol comemorando em campo" class="w-full h-64 object-cover rounded mb-4" src="https://media-hosting.imagekit.io/b9f3899b127342dc/IMG-20250329-WA0018(1).jpg?Expires=1839014477&amp;Key-Pair-Id=K2ZIVPTIP2VGHC&amp;Signature=0FtCM1Stde-WuDpMTyH8-0l1cfc~jr8va4tOzVFZMbZd6STQTTrcdNhGhhDAuHP4yHiA2x7SdboTFka8D0TtK90uZ7hzvimtaULWLi-vnhB1ZtXnKGb-1putYtbYDcsJU6cZL~Krcm38jORV2tIoacto2GddHUcb~q0UGccdYEJRRtliV~U2ltIFomCSh7khRRmFFBgW7N7nfLZotmQB--0YrqQ561SBDigy-mdUzgXgkBw8zQiSbx8ZIzrXYqlwOKUiLA45LDOkcE9L0Jpupx1WlB92slk-TE-RY0zmMuCmAozpV7bTBDQvd9Xd2d7GLwkOuL-QnJ6iJ-Wz226LNA__"/>  
-   </section>  
-   <!-- Cartaz do Próximo Jogo -->  
-   <section class="my-8 cartaz">  
-    <img alt="Logo do Celtic" class="mb-4" src="https://media-hosting.imagekit.io/2ea9d44f345c4bd0/Screenshot_2025-04-11-22-13-58-423_com.whatsapp-edit.jpg?Expires=1839014066&amp;Key-Pair-Id=K2ZIVPTIP2VGHC&amp;Signature=UJlv2K1FlUKYeBB1HGEgqDxLV2ptdHHDS6DtsAwHeCgrNHUdG5C-13nyvsZhEFcmfhdJpqvG7nkKDolLJJsZAOtapvnFQ~d10LAt7sLOaM4ei5kTLhowpNwzZhiZ2XSDAG6cfzG-jRMMkGuhV8W3c4~baZEofLSAVSOgMrfNeqJQ5eIyfX1NHr8LKr4D3JO6QiYzMwiuUBEb4IpLzt77LSaTdGzVWzfjIgsrjbPP8x4oOG9eQ7ir0E3FipN6qGsnkY~vadMNZMDf3LlMbr7EwJ3fF2g23eAsIq3IxNN-7Hufjt12gue7i~PO6yMKNgumxHMbMMjWY3KMdrU25xmLgQ__"/>  
-    <h3>  
-     Próximo Jogo  
-    </h3>  
-    <p>  
-     CFO vs Celtic  
-    </p>  
-    <a class="hover:bg-yellow-500" href="#">  
-     Saber Mais  
-    </a>  
-   </section>  
-   <!-- Últimas Notícias -->  
-   <section class="my-8">  
-    <h2 class="text-2xl font-bold mb-4">  
-     Últimas Notícias  
-    </h2>  
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">  
-     <div class="bg-white text-black p-4 rounded shadow">  
-      <img alt="Imagem de jogadores de futebol em um campo, representando a busca do CF Olivais por novos jogadores" class="w-full h-48 object-cover rounded mb-4" src="https://placehold.co/300x200"/>  
-      <h3 class="text-xl font-bold">  
-       CF Olivais procura jogadores  
-      </h3>  
-      <p class="text-gray-700">  
-       O CF Olivais está à procura de novos talentos para integrar a sua equipa. Se tens paixão pelo futebol e queres fazer parte de um clube dedicado, esta é a tua oportunidade. Inscreve-te já!  
-      </p>  
-     </div>  
-     <div class="bg-white text-black p-4 rounded shadow">  
-      <img alt="Imagem de um campo de futebol vazio, representando o campo do CF Olivais que está fechado" class="w-full h-48 object-cover rounded mb-4" src="https://i.postimg.cc/Y9ctxZvd/Screenshot-2025-04-11-15-49-36-666-com-miui-gallery-edit-1.jpg"/>  
-      <h3 class="text-xl font-bold">  
-       Campo do CF Olivais está fechado  
-      </h3>  
-      <p class="text-gray-700">  
-       Informamos que o campo do CF Olivais está temporariamente fechado para manutenção. Pedimos desculpa pelo incómodo e agradecemos a compreensão de todos. Em breve, o campo estará em melhores condições para receber os nossos jogadores.  
-      </p>  
-     </div>  
-    </div>  
-   </section>  
-   <!-- Notícia do ataque de risos -->  
-   <section class="my-8">  
-    <h2 class="text-2xl font-bold mb-4">  
-     Jogador do CF Olivais tem ataque de risos ao tirar foto de equipa  
-    </h2>  
-    <div class="bg-white text-black p-4 rounded shadow">  
-     <img alt="Imagem de um jogador do CF Olivais sorrindo durante a foto de equipa" class="w-full h-48 object-cover rounded mb-4" src="https://placehold.co/300x200"/>  
-     <p class="text-gray-700 mb-4">  
-      Durante a sessão de fotos da equipa, um dos jogadores do CF Olivais teve um ataque de risos que acabou por contagiar toda a equipa. O momento descontraído resultou em uma das fotos mais engraçadas da temporada, e o vídeo desse momento já está a circular entre os fãs do clube.  
-     </p>  
-     <video class="w-full" controls="">  
-      <source src="https://media-hosting.imagekit.io/ac27d474047c4d4d/VID_20250412_173830.mp4?Expires=1839092688&amp;Key-Pair-Id=K2ZIVPTIP2VGHC&amp;Signature=YFiBIfy~A-61oxm2kTZw8Ue2XwYLl67ZjMw5xmyRov~g6NxnZWhraahF1Y18u-rQGVTgeV21m7~H48WZApG1XBGh6yOO8lV-6GcQ5C4hmWC0cthZOB26A130UfiFlbp9BYmO88oMbrZRw8H61YSQlNjmItaAsM0t3wwHhV64mfX2Zo6HL4eh78T~JsIDUq7DhEu95NiKup9Rp2mG0ZQWJF-t4ZhR3V3Kc3APaQgb3hb5hZQr5QbvhCbxXKotcPmgNIs-hrRiavtwEhNM7DuYmC1R2i0CS0ozrurwajxsawje1UbHpSOpG6afVQtAPsPjzFRPEZaT9ODnz6L0"/>  
-     </video>  
-    </div>  
-   </section>  
-  </main>  
-  <footer class="bg-red-700 p-4 mt-8">  
-   <div class="container mx-auto text-center">  
-    <p>  
-     © 2023 CF Olivais. Todos os direitos reservados.  
-    </p>  
-   </div>  
-  </footer>  
-  <script>  
-   document.getElementById('menu-button').addEventListener('click', function () {  
-            var menu = document.getElementById('menu');  
-            if (menu.classList.contains('hidden')) {  
-                menu.classList.remove('hidden');  
-            } else {  
-                menu.classList.add('hidden');  
-            }  
-        });  
-  </script>  
- </body>  
-</html>  
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #00d4ff;
+            border-bottom: 2px solid #7b2cff;
+            padding-bottom: 10px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #161c4f;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        footer {
+            background-color: #11163a;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>FORTNITE</h1>
+    <p>Battle Royale • Construção • Ação</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#modos">Modos de Jogo</a>
+    <a href="#noticias">Notícias</a>
+</nav>
+
+<div class="container">
+
+    <div class="section" id="sobre">
+        <h2>Sobre o Fortnite</h2>
+        <p>
+            Fortnite é um jogo online da Epic Games que combina ação, construção
+            e estratégia. Luta para ser o último sobrevivente num mundo cheio de
+            jogadores, armas e eventos épicos.
+        </p>
+    </div>
+
+    <div class="section" id="modos">
+        <h2>Modos de Jogo</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Battle Royale</h3>
+                <p>100 jogadores lutam até restar apenas um vencedor.</p>
+            </div>
+            <div class="card">
+                <h3>Zero Construção</h3>
+                <p>Ação pura sem construções, focado em combate.</p>
+            </div>
+            <div class="card">
+                <h3>Criativo</h3>
+                <p>Cria mapas, jogos e experiências personalizadas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="noticias">
+        <h2>Últimas Notícias</h2>
+        <p>🔥 Nova temporada disponível!</p>
+        <p>🎮 Novas skins e eventos semanais.</p>
+        <p>🏆 Torneios competitivos a decorrer.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Site não oficial de Fortnite • Criado para fins educativos</p>
+</footer>
+
+</body>
+</html>
